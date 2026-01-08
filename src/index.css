@@ -1,0 +1,247 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 230 100% 8%;
+    --foreground: 0 0% 100%;
+
+    --card: 230 80% 12%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 230 80% 12%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 240 100% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 90% 60%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 230 50% 20%;
+    --muted-foreground: 220 20% 70%;
+
+    --accent: 200 100% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 230 50% 25%;
+    --input: 230 50% 20%;
+    --ring: 240 100% 50%;
+
+    --radius: 1rem;
+
+    /* Custom Zipperline colors */
+    --zipperline-blue: 240 100% 40%;
+    --zipperline-blue-light: 220 100% 60%;
+    --zipperline-blue-dark: 240 100% 25%;
+    --zipperline-glow: 220 100% 70%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(240, 100%, 25%) 0%, hsl(220, 100%, 40%) 50%, hsl(200, 100%, 50%) 100%);
+    --gradient-radial: radial-gradient(ellipse at center, hsl(220, 100%, 35%) 0%, hsl(240, 100%, 15%) 70%);
+    --gradient-overlay: linear-gradient(180deg, transparent 0%, hsl(240, 100%, 8%) 100%);
+    
+    /* Shadows */
+    --shadow-device: 0 50px 100px -20px hsl(240, 100%, 10% / 0.8), 0 30px 60px -30px hsl(240, 100%, 5% / 0.6);
+    --shadow-glow: 0 0 80px 20px hsl(220, 100%, 50% / 0.3);
+    --shadow-button: 0 10px 40px -10px hsl(220, 100%, 50% / 0.5);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 230 100% 8%;
+    --foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Outfit', sans-serif;
+  }
+}
+
+@layer components {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-radial {
+    background: var(--gradient-radial);
+  }
+  
+  .gradient-overlay {
+    background: var(--gradient-overlay);
+  }
+  
+  .shadow-device {
+    box-shadow: var(--shadow-device);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .shadow-button {
+    box-shadow: var(--shadow-button);
+  }
+  
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(0, 0%, 100%) 0%, hsl(220, 100%, 85%) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-float-delayed {
+    animation: float 6s ease-in-out infinite 1s;
+  }
+  
+  .animate-pulse-glow {
+    animation: pulseGlow 3s ease-in-out infinite;
+  }
+
+  .animate-fade-up {
+    animation: fadeUp 1s ease-out forwards;
+  }
+
+  .animate-fade-up-delayed {
+    animation: fadeUp 1s ease-out 0.3s forwards;
+    opacity: 0;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 1s ease-out 0.5s forwards;
+    opacity: 0;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    box-shadow: 0 0 60px 15px hsl(220, 100%, 50% / 0.3);
+  }
+  50% {
+    box-shadow: 0 0 100px 30px hsl(220, 100%, 60% / 0.5);
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Video background styles */
+.video-background {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+  z-index: 0;
+}
+
+/* Device frame styles */
+.device-frame-iphone {
+  background: linear-gradient(145deg, hsl(0, 0%, 15%) 0%, hsl(0, 0%, 5%) 100%);
+  border-radius: 3rem;
+  padding: 0.5rem;
+  position: relative;
+}
+
+.device-frame-iphone::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 3rem;
+  padding: 1px;
+  background: linear-gradient(145deg, hsl(0, 0%, 40%) 0%, hsl(0, 0%, 10%) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.device-screen {
+  border-radius: 2.5rem;
+  overflow: hidden;
+  background: hsl(0, 0%, 0%);
+}
+
+.device-frame-ipad {
+  background: linear-gradient(145deg, hsl(0, 0%, 20%) 0%, hsl(0, 0%, 8%) 100%);
+  border-radius: 1.5rem;
+  padding: 0.75rem;
+  position: relative;
+}
+
+.device-frame-ipad::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 1.5rem;
+  padding: 1px;
+  background: linear-gradient(145deg, hsl(0, 0%, 45%) 0%, hsl(0, 0%, 15%) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.ipad-screen {
+  border-radius: 0.75rem;
+  overflow: hidden;
+  background: hsl(0, 0%, 0%);
+}
