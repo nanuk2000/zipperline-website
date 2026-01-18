@@ -134,7 +134,7 @@ const Contact = () => {
                 <Mail className="w-5 h-5" />
                 <span>Prefer to email? Feel free to write to </span>
                 <a 
-                  href="mailto:info@zipperline.com" 
+                  href="mailto:dev@zipperline.com"
                   className="text-accent hover:text-accent/80 transition-colors font-medium"
                 >
                   info@zipperline.com
