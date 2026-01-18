@@ -94,7 +94,7 @@ const Hero = () => {
             {/* Coming Soon Android */}
             <div className="flex items-center justify-center gap-3 bg-foreground/5 backdrop-blur-md border border-foreground/10 rounded-xl px-6 py-4 opacity-70">
               <svg className="w-8 h-8 text-foreground" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M17.523 2.232L18.88 0.057 17.2.002l-1.18 1.89a9.13 9.13 0 0 0-4.02-.465 9.13 9.13 0 0 0-4.02.465L6.8.002 5.12.057l1.357 2.175A7.453 7.453 0 0 0 3 8.405h18a7.453 7.453 0 0 0-3.477-6.173zM7 6.405a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm10 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM3 9.405v10a2 2 0 0 0 2 2h1v3a1 1 0 0 0 2 0v-3h4v3a1 1 0 0 0 2 0v-3h4v3a1 1 0 0 0 2 0v-3h1a2 2 0 0 0 2-2v-10H3zm-2 0a1 1 0 0 0-1 1v6a1 1 0 0 0 2 0v-6a1 1 0 0 0-1-1zm22 0a1 1 0 0 0-1 1v6a1 1 0 0 0 2 0v-6a1 1 0 0 0-1-1z"/>
+                <path d="M17.6,11.48 L19.28,8.53 a0.67,0.67,0,0,0,-0.24,-0.92,0.67,0.67,0,0,0,-0.92,0.24 L15.82,11.3 a11.43,11.43,0,0,0,-7.64,0 L5.88,7.85 A0.67,0.67,0,0,0,4.96,7.61 a0.67,0.67,0,0,0,-0.24,0.92 L6.4,11.48 A10.6,10.6,0,0,0,2.15,19 H21.85 A10.6,10.6,0,0,0,17.6,11.48 Z M7,16.75 A0.75,0.75,0,1,1,7.75,16,0.75,0.75,0,0,1,7,16.75 Z M17,16.75 A0.75,0.75,0,1,1,17.75,16,0.75,0.75,0,0,1,17,16.75 Z"/>
               </svg>
               <div className="text-left">
                 <p className="text-xs text-muted-foreground">Coming Soon to</p>
