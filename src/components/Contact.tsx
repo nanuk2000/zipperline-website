@@ -137,7 +137,7 @@ const Contact = () => {
                   href="mailto:dev@zipperline.com"
                   className="text-accent hover:text-accent/80 transition-colors font-medium"
                 >
-                  info@zipperline.com
+                  dev@zipperline.com
                 </a>
               </div>
             </div>
